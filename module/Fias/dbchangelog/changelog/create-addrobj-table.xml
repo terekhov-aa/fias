@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="a.terekhov" id="create-addrobj-table" remarks="Реестр образующих элементов">
+        <createTable tableName="bookmark" schemaName="administration">
+            <column name="aoguid" type="varchar" remarks="Глобальный уникальный идентификатор адресного объекта ">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="formalname" type="varchar" remarks="Формализованное наименование">
+            </column>
+            <column name="regioncode" type="varchar" remarks="Код регионв">
+            </column>
+            <column name="autocode" type="varchar" remarks="Код автономии">
+            </column>
+            <column name="areacode" type="varchar" remarks="Код района">
+            </column>
+            <column name="citycode" type="varchar" remarks="Код города">
+            </column>
+            <column name="ctarcode" type="varchar" remarks="Код внутригородского района">
+            </column>
+            <column name="placecode" type="varchar" remarks="Код населенного пункта">
+            </column>
+            <column name="plancode" type="varchar" remarks="Код элемента планировочной структуры">
+            </column>
+            <column name="streetcode" type="varchar" remarks="Код улицы">
+            </column>
+            <column name="extrcode" type="varchar" remarks="Код дополнительного адресообразуещего элемента">
+            </column>
+            <column name="sextcode" type="varchar" remarks="Код подчинительного адресообразующего эдемента">
+            </column>
+            <column name="offname" type="varchar" remarks="Официальное наименование">
+            </column>
+            <column name="postalcode" type="varchar" remarks="Почтовый индекс">
+            </column>
+            <column name="ifnsfl" type="varchar" remarks="Код ИФНС ФЛ">
+            </column>
+            <column name="terrifnsfl" type="varchar" remarks="Код территориального участка ИФНС ФЛ">
+            </column>
+            <column name="ifnsul" type="varchar" remarks="Код ИФНС ЮЛ">
+            </column>
+            <column name="terrifnsjul" type="varchar" remarks="Код территориального ИФНС ЮЛ">
+            </column>
+            <column name="okato" type="varchar" remarks="ОКАТО">
+            </column>
+            <column name="oktmo" type="varchar" remarks="ОКТМО">
+            </column>
+            <column name="updatedate" type="date" remarks="Дата внесения (обновления) записи">
+            </column>
+            <column name="shortname" type="varchar" remarks="Краткое наименование типа объекта">
+            </column>
+            <column name="aolevel" type="int" remarks="Уровень адресного объекта">
+            </column>
+            <column name="parentguid" type="varchar" remarks="Идентификатор объекта родительского объекта">
+            </column>
+            <column name="aoid" type="varchar" remarks="Уникальный идентификатор записи. Ключевое поле">
+            </column>
+            <column name="previd" type="varchar" remarks="Идентификатор записи связывания с предыдущей исторической записью">
+            </column>
+            <column name="nextid" type="varchar" remarks="Идентификатор записи связывания с последующей исторической записью">
+            </column>
+            <column name="code" type="varchar" remarks="Идентификатор записи связывания с предыдущей исторической записью">
+            </column>
+            <column name="plaincode" type="varchar" remarks="Идентификатор записи связывания с предыдущей исторической записью">
+            </column>
+            <column name="actstatus" type="int" remarks="Статус последней исторической записи в жизненном цикле адресного объекта:
+0 – Не последняя
+1 - Последняя
+">
+            </column>
+            <column name="livestatus" type="int" remarks="Статус последней исторической записи в жизненном цикле адресного объекта:
+0 – Не последняя
+1 - Последняя
+">
+            </column>
+            <column name="centstatus" type="int" remarks="Статус центра">
+            </column>
+            <column name="operstatus" type="int" remarks="Статус действия над записью – причина появления записи (см. OperationStatuses )">
+            </column>
+            <column name="currstatus" type="int" remarks="Статус действия над записью – причина появления записи (см. OperationStatuses )">
+            </column>
+            <column name="startdate" type="date" remarks="">
+            </column>
+            <column name="enddate" type="date" remarks="">
+            </column>
+            <column name="normdoc" type="varchar" remarks="">
+            </column>
+            <column name="cadnum" type="varchar" remarks="">
+            </column>
+            <column name="divtype" type="int" remarks="">
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

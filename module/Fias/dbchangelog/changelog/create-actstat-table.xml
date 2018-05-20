@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="a.terekhov" id="create-actstat-table" remarks="Статус актуальности ФИАС">
+        <createTable tableName="bookmark" schemaName="administration">
+            <column name="actstatid" type="int" autoIncrement="true" remarks="Идентификатор статуса">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="name" type="varchar" remarks="Наименование
+0 – Не актуальный
+1 – Актуальный (последняя запись по адресному объекту)
+">
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
